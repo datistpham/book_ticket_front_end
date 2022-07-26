@@ -20,6 +20,7 @@ import CachedIcon from '@mui/icons-material/Cached';
 import "./i18n"
 import { useTranslation } from "react-i18next"
 import HomePage from "./components/HomePage/HomePage"
+import moment from "moment"
 
 
 const PreBookingComponent = lazy(() => {
@@ -65,6 +66,7 @@ const App=(props)=> {
     <Router>
       <div style={{height: 60, width: "100%", background: "#f2f3f3"}}></div>
       <div style={{height: 60, width: "100%", background: "#fff", position: "fixed", left: 0, top: 0, zIndex: 9999, display: "flex", padding: "0 50px", justifyContent: "space-between", backgroundColor: "#fff", alignItems: "center", boxSizing: "border-box"}}>
+        <button onClick={()=> console.log(moment("24-07-2022", "DD-MM-YYYY").valueOf())}>Click</button>
         <div style={{display: "flex", justifyContent: 'center',alignItems: "center", gap: 50}}>
           <Link to={"/"} style={{textDecoration: "none", color: "#2e89ff", fontSize: 20, fontWeight: 600}}>
             Home
